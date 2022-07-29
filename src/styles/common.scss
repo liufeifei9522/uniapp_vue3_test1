@@ -1,0 +1,27 @@
+@import "./vars.scss";
+@import "./mixins.scss";
+
+page {
+  box-sizing: border-box;
+  font-size: $font-size;
+}
+
+view,
+text {
+  font-size: $font-size;
+  box-sizing: border-box;
+  color: #333;
+}
+// 去除按钮默认边框
+button::after {
+  border: none;
+}
+
+.flex-row {
+  @include flex-row();
+}
+
+.flex-row-between {
+  @include flex-row();
+  justify-content: space-between;
+}
